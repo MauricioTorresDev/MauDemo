@@ -45,10 +45,16 @@
                          <td>
                               <%=dato.fechaRegistro%>
                          </td>
+                         <td>
+                              <!-- Botones de Actualizar y Borrar -->
+                              <a href="/actualizar/<%=dato.id%>" class="btn btn-success">Actualizar</a>
+                              <a href="/borrar/<%=dato.id%>" class="btn btn-danger">Borrar</a>
+                         </td>
                     </tr>
                     <% } ); %>
           </tbody>
      </table>
+     <a href="/" class="btn btn-primary">Agregar Nuevo Registro</a>
 </body>
 
 </html>

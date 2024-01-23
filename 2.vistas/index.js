@@ -27,7 +27,7 @@ app.post('/guardar', (req, res) => {
           } else {
                console.log('Datos guardados correctamente');
                //res.send('Datos guardados correctamente');
-               res.render('/');
+               res.redirect('/mostrar');
           }
      })
 })
@@ -45,9 +45,59 @@ app.get('/mostrar', (req, res) => {
      })
 })
 
-
-
-
+//ruta para actulizar una base de datos
+app.get('/actualizar/:id', (req, res) => {
+     const id = req.params.id;
+     const query = 'SELECT id, nombres, apellidos, dni, DATE_FORMAT(fechaNacimiento, "%Y-%m-%d") as fechaNacimiento FROM datos WHERE id = ?'
+     db.query(query, [id], (err, result) => {
+          if (err) {
+               console.error("Error al actualizar el dato")
+               res.send('Error al actualizar el dato ' + err)
+          } else {
+               res.render('actualizar', { datos: result[0] });
+          }
+     });
+});
+app.post('/actualizar/:id', (req, res) => {
+     const id = req.params.id;
+     const { nombres, apellidos, dni, fechaNacimiento } = req.body;
+     const query = 'UPDATE datos SET nombres=?, apellidos=?, dni=?, fechaNacimiento=? WHERE id=?'
+     db.query(query, [nombres, apellidos, dni, fechaNacimiento, id], (err, result) => {
+          if (err) {
+               console.error('Error al actualizar en la base de datos:', err);
+               res.send('Error al actualizar en la base de datos:', err);
+          } else {
+               console.log('Datos Actualizados')
+               res.redirect('/mostrar')
+          }
+     });
+});
+//Eliminar un dato de la tabla
+app.get('/borrar/:id', (req, res) => {
+     const id = req.params.id;
+     const query = 'SELECT id, nombres, apellidos, dni, DATE_FORMAT(fechaNacimiento, "%Y-%m-%d") as fechaNacimiento FROM datos WHERE id = ?'
+     db.query(query, [id], (err, result) => {
+          if (err) {
+               console.error("Error al borrar el dato")
+               res.send('Error al borrar el dato ' + err)
+          } else {
+               res.render('borrar', { datos: result[0] });
+          }
+     });
+});
+app.post('/borrar/:id', (req, res) => {
+     const id = req.params.id;
+     const query = 'DELETE FROM datos WHERE id=?';
+     db.query(query, [id], (err, result) => {
+          if (err) {
+               console.error('Error al borrar en la base de datos: ', err);
+               res.send('Error al borrar en la base de datos');
+          } else {
+               console.log('Datos borrados correctamente');
+               res.redirect('/mostrar');
+          }
+     });
+})
 
 //INICIAR SERVIDOR
 const PORT = process.env.PORT || 3000;
