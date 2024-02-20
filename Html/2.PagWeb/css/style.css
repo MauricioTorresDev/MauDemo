@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Protest+Revolution&display=swap');
+
+* {
+     box-sizing: border-box;
+     margin: 0;
+     font-size: 20px;
+
+     list-style: none;
+     padding: 0;
+}
+
+body {
+     background-color: white;
+     color: black;
+     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+}
+
+.navbar {
+     background-color: white;
+     color: black;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+}
+
+.navbar-logo img {
+     max-width: 200px;
+}
+
+.navbar-links {
+     display: flex;
+}
+
+.navbar-links li {
+     margin-right: 20px;
+     background-color: orange;
+     padding: 14px;
+     border: 2px solid black;
+     border-radius: 40px;
+
+}
+
+.navbar-links li a {
+     color: white;
+     font-weight: 800;
+     text-decoration: none;
+     font-size: 15px;
+}
+
+/*Estilo seccion hero*/
+.hero {
+     background-image: url('../img/patio.jpg');
+     background-size: cover;
+     background-position: center;
+     text-align: center;
+     padding: 270px 0;
+}
+
+.hero-content {
+     max-width: 600px;
+     margin: 0 auto;
+}
+
+.hero h1 {
+     font-size: 50px;
+     margin-bottom: 10px;
+}
+
+.hero p {
+     font-size: 20px;
+     margin-bottom: 30px;
+}
+
+.btn {
+     display: inline-block;
+     background-color: #fdad00;
+     color: #fff;
+     padding: 10px 20px;
+     border-radius: 10px;
+     text-decoration: none;
+     border: 1px solid white;
+}
+
+.btn:hover {
+     color: black;
+     border: 1px solid black;
+}
+
+/* Quienes somos */
+section {
+     padding: 50px 20px;
+}
+
+section h2 {
+     font-size: 30px;
+     color: rgba(0, 0, 255, 0.767);
+     margin-bottom: 20px;
+}
+
+section p {
+     font-size: 15px;
+     line-height: 1.6;
+}
+
+/*Historico*/
+.historico {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 50px;
+}
+
+.historico-texto {
+     flex: 1;
+     padding-right: 20px;
+}
+
+.historico-texto h2 {
+     font-size: 30px;
+     font-weight: 90;
+     border-bottom: 2px solid #0932d8;
+}
+
+.historico-texto p {
+     font-size: 15px;
+     line-height: 1.7;
+     margin-bottom: 20px;
+}
+
+.historico-imagen {
+     flex: 1;
+}
+
+.historico-imagen img {
+     max-width: 50%;
+     height: auto;
+     border-radius: 50px;
+
+}
+
+.mision-vision {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 50px;
+}
+
+.mision-vision .txt {
+     flex: 1;
+     padding-right: 50px;
+     color: red;
+}
+
+.mision-vision h3 {
+     border: 30px;
+     margin-top: 20px;
+     color: blue;
+
+}
+
+.mision-vision p {
+     border: 30px;
+     margin-top: 20px;
+     color: black;
+     line-height: 1.6;
+     margin-bottom: 50px;
+
+}
+
+.datos {
+
+     margin-top: 50px;
+}
+
+.datos .btn {
+     color: blue;
+     text-decoration: none;
+     background: none;
+     border-radius: none;
+     border: none;
+     text-shadow: 0 0 7px;
+}
+
+.datos .btn:hover {
+     color: red
+}
+
+.datos h3 {
+     color: red;
+     margin-bottom: 15px;
+     text-align: center;
+
+}
+
+.datos .video {
+     border: 2px solid blue;
+     text-align: center;
+     margin-top: 50px;
+     box-shadow: 0 0 10px black;
+
+}
+
+/* FOOTER */
+footer {
+     background-color: #001f99;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     font-weight: 400;
+     font-style: normal;
+     font-family: "Protest Revolution", sans-serif;
+}
+
+.footer-content {
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+}
+
+.contacto {
+     border-bottom: 8px solid red;
+     margin-bottom: 24px;
+     width: fit-content;
+}
+
+.contacto h4 {
+     font-size: 30px !important;
+}
+
+.items li {
+     list-style: none;
+     padding: 10px;
+     font-size: 20px;
+}
+
+.items li span {
+     color: rgb(46, 247, 46);
+     font-size: 23px;
+     margin-left: 5px;
+}
+
+.items li i {
+     color: #ebc700;
+     font-size: 23px;
+     margin-right: 5px;
+}
+
+.items li a {
+     color: #ebc700;
+     font-size: 18px;
+     text-decoration: wavy underline;
+     font-weight: 900;
+}
