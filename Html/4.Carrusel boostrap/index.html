@@ -39,11 +39,93 @@
                padding: 30px;
                gap: 18px;
           }
+
+          .boton {
+               display: flex;
+               padding: 30px;
+               justify-content: center;
+               padding: 30px;
+               align-items: center;
+               gap: 10px;
+               flex-direction: column;
+          }
+
+          .col img {
+               border-radius: 20px;
+          }
+
+          .pulsador {
+               display: flex;
+               padding: 5px;
+     
+          }
      </style>
 </head>
 
 <body>
      <h1>Hello, world!</h1>
+     <div class="pulsador">
+          <div class="dropdown">
+               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Pulsador
+               </button>
+               <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Imagen 1</a></li>
+                    <li><a class="dropdown-item" href="#">Imagen 2</a></li>
+                    <li><a class="dropdown-item" href="#">Imagen 3</a></li>
+                    <li><a class="dropdown-item" href="#">Imagen 4</a></li>
+               </ul>
+          </div>
+     </div>
+     <div class="boton">
+          <p class="d-inline-flex gap-1">
+               <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1">Primera Imagen</a>
+               <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                    aria-controls="multiCollapseExample2">Segunda Imagen</button>
+               <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample3" aria-expanded="false"
+                    aria-controls="multiCollapseExample3">Tercera Imagen</button>
+               <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample4" aria-expanded="false"
+                    aria-controls="multiCollapseExample4">Cuarta Imagen</button>
+               <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse"
+                    aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Todas las
+                    Imagenes</button>
+          </p>
+          <div class="row">
+               <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                         <div class="card card-body">
+                              <img src="./img/s1.jpg" class="card-img-top" alt="...">
+                         </div>
+                    </div>
+               </div>
+               <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                         <div class="card card-body">
+                              <img src="./img/s2.jpg" class="card-img-top" alt="...">
+                         </div>
+                    </div>
+               </div>
+               <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                         <div class="card card-body">
+                              <img src="./img/s3.jpg" class="card-img-top" alt="...">
+                         </div>
+                    </div>
+               </div>
+               <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample4">
+                         <div class="card card-body">
+                              <img src="./img/s4.jpg" class="card-img-top" alt="...">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
      <div class="tarjeta">
           <div class="card" style="width: 18rem;">
                <img src="./img/s1.jpg" class="card-img-top" alt="...">
